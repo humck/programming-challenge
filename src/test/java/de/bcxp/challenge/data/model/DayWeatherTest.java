@@ -3,7 +3,6 @@ package de.bcxp.challenge.data.model;
 import de.bcxp.challenge.data.model.DayWeather;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
