@@ -6,6 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests for DataSet
+ */
 public class DataSetTest {
     @Test
     void constructor_validInput() {
