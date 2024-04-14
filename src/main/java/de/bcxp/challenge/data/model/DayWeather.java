@@ -1,4 +1,4 @@
-package de.bcxp.challenge.data.provider.model;
+package de.bcxp.challenge.data.model;
 
 /**
  * Class containing weather information relating to a specific day of a month
@@ -7,6 +7,12 @@ public class DayWeather {
     private int day;
     private double mxT;
     private double mnT;
+
+    public DayWeather(int day, double mxT, double mnT) {
+        setDay(day);
+        this.mnT = mnT;
+        this.mxT = mxT;
+    }
 
     /**
      * gets the day of the month to which the infos relate
@@ -57,5 +63,13 @@ public class DayWeather {
      */
     public void setMxT(double mxT) {
         this.mxT = mxT;
+    }
+
+    /**
+     * calculates the difference between mxT & mnT
+     * @return the calculated temperature spread
+     */
+    public double calculateTemperatureSpread() {
+        return mxT - mnT;
     }
 }
