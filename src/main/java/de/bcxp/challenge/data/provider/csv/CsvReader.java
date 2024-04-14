@@ -12,6 +12,14 @@ import java.util.List;
 
 public class CsvReader implements DataProvider {
 
+    private String csvSeparator = ",";
+
+    public CsvReader() {}
+
+    public CsvReader(String csvSeparator) {
+        this.csvSeparator = csvSeparator;
+    }
+
     @Override
     public DataSet getDataSetFromResource(URL resource) {
         String file = resource.getPath();
@@ -20,7 +28,7 @@ public class CsvReader implements DataProvider {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] values = line.split(",");
+                String[] values = line.split(csvSeparator);
                 data.add(values);
             }
         } catch (IOException exception) {
