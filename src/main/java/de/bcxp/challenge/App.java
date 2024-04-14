@@ -13,17 +13,9 @@ public final class App {
     public static void main(String... args) {
 
         // Your preparation code …
+        AssignmentComponent solution = new AssignmentComponent();
 
-        // DataProvider csvReader = new CsvReader(); // path to resources
-        // List<WeatherInformation> weatherDataset = csvReader.GetData<DayData>("<./resources/.../weather.csv>");
-        // List<CountryInformation> countriesDataset = csvReader.GetData<CountryData>("<./resources/.../weather.csv>");
-
-        // DataProcessor dataProcessor = new DataProcessor();
-        // dataProcessor.getMinimum(weatherDataset, (WeatherInformation w) -> WeatherUtils.calculateTempSpread(w)); // -> vs. w.calculateTempSpread()
-        // dataProcessor.getMaximum(countriesDataset, (CountryInformation c) -> CountryUtils.calculatePopulationDensity(c)); // -> vs. c.calculatePopulationDensity()
-
-
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
+        String dayWithSmallestTempSpread = solution.getDayWithSmallestTemperatureSpread();     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread);
 
         String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
