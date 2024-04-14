@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Class for transforming DataSets into specific Objects
  */
-public class DataSetAdapter {
+public class DataSetConverter {
 
     /**
      * Get DayWeather-Set from DataSet

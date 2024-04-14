@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Tests for DataSetAdapter
  */
-public class DataSetAdapterTest {
+public class DataSetConverterTest {
     @Test
     void DataSetToDayWeatherSet_validInput() {
         List<String> columns = new LinkedList<>();
@@ -28,9 +28,9 @@ public class DataSetAdapterTest {
 
         DataSet dataSet = new DataSet(columns, rows);
 
-        DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
-        List<DayWeather> result = DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        List<DayWeather> result = DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
         assertEquals(3, result.size(), "Not all weather data were translated");
 
@@ -55,9 +55,9 @@ public class DataSetAdapterTest {
 
         DataSet dataSet = new DataSet(columns, rows);
 
-        DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
-        List<DayWeather> result = DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        List<DayWeather> result = DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
         assertEquals(0, result.size(), "Not all weather data were translated");
     }
@@ -73,9 +73,9 @@ public class DataSetAdapterTest {
 
         DataSet dataSet = new DataSet(columns, rows);
 
-        DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
-        List<DayWeather> result = DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        List<DayWeather> result = DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
         assertEquals(0, result.size(), "Not all weather data were translated");
     }
@@ -93,9 +93,9 @@ public class DataSetAdapterTest {
 
         DataSet dataSet = new DataSet(columns, rows);
 
-        DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
-        List<DayWeather> result = DataSetAdapter.dataSetToDayWeatherSet(dataSet);
+        List<DayWeather> result = DataSetConverter.dataSetToDayWeatherSet(dataSet);
 
         assertEquals(0, result.size(), "Not all weather data were translated");
     }
